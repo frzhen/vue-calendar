@@ -22,14 +22,13 @@ export default {
 <style land="scss">
   html, body {
     height: 100%;
-    background: #eee;
+    background: #6e6e6e;
   }
 </style>
 
 <style lang="scss" scoped>
 #app {
     /* SCSS for app */
-    background: #6e6e6e;
     display: flex;
     flex-direction: column;
     align-items: center;
