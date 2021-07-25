@@ -2,7 +2,10 @@
   <div id="calendar-entry">
       <!-- Markup for calendar entry -->
       <div class="calendar-entry-note">
-        <input type="text" placeholder="New Event" v-model="inputEntry" required />
+        <input type="text" placeholder="New Event" 
+        v-model="inputEntry" 
+        @keypress="enterKeySubmitEvent(inputEntry, $event)"
+        required />
         <p class="calendar-entry-day">
           Day of event: 
           <span class="weekday">
@@ -35,6 +38,11 @@ export default {
     }
   },
   methods: {
+    enterKeySubmitEvent(eventDetails, e) {
+      if (e.key === 'Enter') {
+        this.submitEvent(eventDetails);
+      }
+    },
     submitEvent(eventDetails) {
       if (eventDetails === '') return this.error = true;
 

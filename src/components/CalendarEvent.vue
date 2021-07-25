@@ -3,17 +3,19 @@
     <div v-if="!event.edit">
       <span class="has-text-centered details">{{ event.details }}</span>
       <div class="has-text-centered icons">
-        <i class="fas fa-edit" @click="editEvent(day.id, event.details)"></i>
+        <i class="fas fa-edit" @click="editEventCursor(day.id, event.details)"></i>
         <i class="fas fa-trash-alt" @click="deleteEvent(day.id, event.details)"></i>
       </div>
     </div>
     <div v-if="event.edit">
-      <input type="text" :placeholder="event.details" v-model="newEventDetails" />
+      <input ref="editor" type="text" :placeholder="event.details" 
+        v-model="newEventDetails" 
+        @keypress="enterKeyUpdateEvent(day.id, event.details, newEventDetails, $event)" />
       <div class="has-text-centered icons">
         <i class="fas fa-check" @click="updateEvent(day.id, event.details, newEventDetails)"></i>
       </div>
-
     </div>
+    
   </div>
 </template>
 
@@ -36,6 +38,17 @@ export default {
     }
   },
   methods: {
+    editEventCursor(dayId, eventDetails) {
+      this.editEvent(dayId, eventDetails);
+      this.$nextTick(() => {
+        // const input = document.querySelector('#editor');
+        const input = this.$refs.editor;
+        input.focus();
+        input.value = eventDetails;
+        const len = eventDetails.length;
+        input.setSelectionRange(len, len);
+      });
+    },
     editEvent(dayId, eventDetails) {
       store.editEvent(dayId, eventDetails);
     },
@@ -44,10 +57,15 @@ export default {
       store.updateEvent(dayId, originalEventDetails, updatedEventDetails);
       this.newEventDetails = '';
     },
+    enterKeyUpdateEvent(dayId, originalEventDetails, updatedEventDetails, e) {
+      if (e.key === 'Enter') {
+        this.updateEvent(dayId, originalEventDetails, updatedEventDetails);
+      } 
+    },
     deleteEvent(dayId, eventDetails) {
       store.deleteEvent(dayId, eventDetails);
     },
-  },
+  }
 }
 </script>
 
@@ -64,8 +82,12 @@ export default {
     display: block;
   }
 
-  .icons .fas {
-    padding: 0 2px;
+  .icons {
+    margin-top: 5px;
+  
+    .fas {
+      padding: 0 2px;
+    }
   }
 
   input {
@@ -78,5 +100,9 @@ export default {
       outline: none;
     }
   }
+}
+.error {
+  color: red;
+  font-size: 12px;
 }
 </style>
