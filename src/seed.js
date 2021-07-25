@@ -61,4 +61,6 @@ export const seedData = [
     ],
     active: false
   }
-]
+];
+
+export const errorMsg = "You must type something first!"
