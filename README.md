@@ -1,4 +1,4 @@
-# calendar
+# Calendar project in Vue.js
 
 ## Project setup
 
@@ -34,7 +34,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Vue Upgrade
 *`npm install -g @vue/cli@next`
 * Vue/Cli: 5.0.0
-* Vue: 
+* Vue: 3.2.23
+* [Vue 2 vs Vue 3 and Migration Notes](https://github.com/frzhen/vue-calendar/blob/bootstrap/Migration_V2_to_V3.md)
 
 
 
