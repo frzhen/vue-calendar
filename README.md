@@ -31,7 +31,8 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 ************************************************************
 _The following markup only supported in mermaid plugin_
-   - [add chrome extension](https://chrome.google.com/webstore/detail/mermaid-diagrams/phfcghedmopjadpojhmmaffjmfiakfil/related)
+   - [add chrome extension for mermaid](https://chrome.google.com/webstore/detail/mermaid-diagrams/phfcghedmopjadpojhmmaffjmfiakfil/related)
+   - [add chrome externsion for PlantUML](https://chrome.google.com/webstore/detail/plantuml-visualizer/ffaloebcmkogfdkemcekamlmfkkmgkcf/related)
    - [add webstorm plugin from: `prefereence->Language & Frameworks->Markedown` Select Mermaid or PlantUML](https://www.jetbrains.com/help/webstorm/markdown.html#diagrams)
 ### Vue Component Structure
 ```mermaid
