@@ -19,7 +19,7 @@ export default {
 
 </script>
 
-<style land="scss">
+<style lang="scss">
   html, body {
     height: 100%;
     background: #6e6e6e;

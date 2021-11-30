@@ -25,9 +25,17 @@ npm run lint
 ```
 
 ### Customize configuration
-
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+### Branches Info
+* main: vue3+bulma
+* bootstrap: vue3+bootstrap5
+
+
+
+************************************************************
+
+_The following markup only supported in Gitlab mermaid plugin_
 ### Vue Component Structure
 
 ```mermaid
