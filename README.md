@@ -1,32 +1,5 @@
 # Calendar project in Vue.js
 
-## Project setup
-
-```script
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```script
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```script
-npm run build
-```
-
-### Lints and fixes files
-
-```script
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 ### Branches Info
 * main: vue3+bulma
 * bootstrap: vue3+bootstrap5
@@ -37,13 +10,29 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 * Vue: 3.2.23
 * [Vue 2 vs Vue 3 and Migration Notes](https://github.com/frzhen/vue-calendar/blob/bootstrap/Migration_V2_to_V3.md)
 
-
-
+## Project setup
+```script
+npm install
+```
+### Compiles and hot-reloads for development
+```script
+npm run serve
+```
+### Compiles and minifies for production
+```script
+npm run build
+```
+### Lints and fixes files
+```script
+npm run lint
+```
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
 ************************************************************
-
-_The following markup only supported in Gitlab mermaid plugin_
+_The following markup only supported in mermaid plugin_
+   - [add Broswer extension](https://github.com/BackMarket/github-mermaid-extension)
+   - [add webstorm plugin from: `prefereence->Language & Frameworks->Markedown` Select Mermaid or PlantUML](https://www.jetbrains.com/help/webstorm/markdown.html#diagrams)
 ### Vue Component Structure
-
 ```mermaid
 graph TD;
     id1(App)-->id2([CalendarEntry])
@@ -51,9 +40,7 @@ graph TD;
     id3[[CalendarWeek]]-->id4[[CalendarDay]]
     id4[[CalendarDay]]-->id5([CalendarEvent])
 ```
-
 #### gantt chart example
-
 ```mermaid
 gantt
     title Gantt Diagram
