@@ -31,6 +31,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 * main: vue3+bulma
 * bootstrap: vue3+bootstrap5
 
+### Vue Upgrade
+*`npm install -g @vue/cli@next`
+* Vue/Cli: 5.0.0
+* Vue: 
+
 
 
 ************************************************************
