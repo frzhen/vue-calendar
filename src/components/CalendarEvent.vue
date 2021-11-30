@@ -10,7 +10,7 @@
     <div v-if="event.edit">
       <input ref="editor" type="text" :placeholder="event.details" 
         v-model="newEventDetails" 
-        @keypress="enterKeyUpdateEvent(day.id, event.details, newEventDetails, $event)" />
+        @keypress.enter="updateEvent(day.id, event.details, newEventDetails)" />
       <div class="has-text-centered icons">
         <i class="fas fa-check" @click="updateEvent(day.id, event.details, newEventDetails)"></i>
       </div>
@@ -57,11 +57,12 @@ export default {
       store.updateEvent(dayId, originalEventDetails, updatedEventDetails);
       this.newEventDetails = '';
     },
-    enterKeyUpdateEvent(dayId, originalEventDetails, updatedEventDetails, e) {
-      if (e.key === 'Enter') {
-        this.updateEvent(dayId, originalEventDetails, updatedEventDetails);
-      } 
-    },
+    // the following code has beeen replaced by using vue key modifier
+    // enterKeyUpdateEvent(dayId, originalEventDetails, updatedEventDetails, e) {
+    //   if (e.key === 'Enter') {
+    //     this.updateEvent(dayId, originalEventDetails, updatedEventDetails);
+    //   } 
+    // },
     deleteEvent(dayId, eventDetails) {
       store.deleteEvent(dayId, eventDetails);
     },

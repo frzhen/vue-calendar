@@ -4,7 +4,7 @@
       <div class="calendar-entry-note">
         <input type="text" placeholder="New Event" 
         v-model="inputEntry" 
-        @keypress="enterKeySubmitEvent(inputEntry, $event)"
+        @keypress.enter="submitEvent(inputEntry)"
         required />
         <p class="calendar-entry-day">
           Day of event: 
@@ -38,11 +38,12 @@ export default {
     }
   },
   methods: {
-    enterKeySubmitEvent(eventDetails, e) {
-      if (e.key === 'Enter') {
-        this.submitEvent(eventDetails);
-      }
-    },
+    // the following code has been replaced by using vue key modifer
+    // enterKeySubmitEvent(eventDetails, e) {
+    //   if (e.key === 'Enter') {
+    //     this.submitEvent(eventDetails);
+    //   }
+    // },
     submitEvent(eventDetails) {
       if (eventDetails === '') return this.error = true;
 
