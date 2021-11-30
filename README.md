@@ -36,11 +36,24 @@ _The following markup only supported in mermaid plugin_
 ### Vue Component Structure
 ```mermaid
 graph TD;
-    id1(App)-->id2([CalendarEntry])
     id1(App)-->id3[[CalendarWeek]]
     id3[[CalendarWeek]]-->id4[[CalendarDay]]
     id4[[CalendarDay]]-->id5([CalendarEvent])
+    id1(App)-->id2([CalendarEntry])
 ```
+```plantuml
+
+App -> CalendarEntry: props
+App -> CalendarWeek: props
+
+CalendarWeek -> CalendarDay: props
+CalendarDay -> CalendarEvent: props
+CalendarEvent --> CalendarDay: $emit()
+CalendarDay --> CalendarWeek: $emit()
+CalendarWeek --> App: $emit()
+hnote across: Vuex (or simple state management, or global event bus)
+```
+
 #### gantt chart example
 ```mermaid
 gantt
