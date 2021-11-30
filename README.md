@@ -42,6 +42,7 @@ graph TD;
     id1(App)-->id2([CalendarEntry])
 ```
 ```plantuml
+@startuml
 
 App -> CalendarEntry: props
 App -> CalendarWeek: props
@@ -52,6 +53,8 @@ CalendarEvent --> CalendarDay: $emit()
 CalendarDay --> CalendarWeek: $emit()
 CalendarWeek --> App: $emit()
 hnote across: Vuex (or simple state management, or global event bus)
+
+@enduml
 ```
 
 #### gantt chart example
