@@ -10,19 +10,20 @@
 * Vue: 3.2.23
 * [Vue 2 vs Vue 3 and Migration Notes](https://github.com/frzhen/vue-calendar/blob/bootstrap/Migration_V2_to_V3.md)
 
-## Project setup
+### Project setup
+* Install Dependencies: 
 ```script
 npm install
 ```
-### Compiles and hot-reloads for development
+* Compiles and hot-reloads for development
 ```script
 npm run serve
 ```
-### Compiles and minifies for production
+* Compiles and minifies for production
 ```script
 npm run build
 ```
-### Lints and fixes files
+* Lints and fixes files
 ```script
 npm run lint
 ```
@@ -30,7 +31,7 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 ************************************************************
 _The following markup only supported in mermaid plugin_
-   - [add Broswer extension](https://github.com/BackMarket/github-mermaid-extension)
+   - [add chrome extension](https://chrome.google.com/webstore/detail/mermaid-diagrams/phfcghedmopjadpojhmmaffjmfiakfil/related)
    - [add webstorm plugin from: `prefereence->Language & Frameworks->Markedown` Select Mermaid or PlantUML](https://www.jetbrains.com/help/webstorm/markdown.html#diagrams)
 ### Vue Component Structure
 ```mermaid
