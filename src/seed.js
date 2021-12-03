@@ -64,3 +64,5 @@ export const seedData = [
 ];
 
 export const errorMsg = "You must type something first!";
+
+export const eventColors = ['#E281EC', '#46cccd', '#00CA71'];

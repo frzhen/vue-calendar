@@ -21,6 +21,7 @@
 
 <script>
 import { store } from "@/store";
+import { eventColors } from "@/seed";
 
 export default {
   name: 'CalendarEvent',
@@ -32,8 +33,7 @@ export default {
   },
   computed: {
     getEventBackgroundColor() {
-      const colors = ['#E281EC', '#46cccd', '#00CA71'];
-      let randomColor = colors[Math.floor(Math.random() * colors.length)]
+      let randomColor = eventColors[Math.floor(Math.random() * eventColors.length)]
       return `background-color: ${randomColor}`;
     }
   },
