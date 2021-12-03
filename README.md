@@ -57,6 +57,9 @@ hnote across: Vuex (or simple state management, or global event bus)
 @enduml
 ```
 
+### Other Structure Documentation:
+* [store.js structure](https://github.com/frzhen/vue-calendar/blob/main/src/store.md)
+
 #### gantt chart example
 ```mermaid
 gantt
