@@ -24,3 +24,5 @@ pnpm-debug.log*
 
 # Generated Configuration
 package-lock.json
+
+public/fontawesome

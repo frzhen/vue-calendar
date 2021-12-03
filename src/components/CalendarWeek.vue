@@ -2,8 +2,8 @@
   <div id="calendar-week" class="container">
       <!-- Markup for calendar week -->
       <div class="columns is-mobile">
-        <CalendarDay v-for="day in sharedState.data" 
-          :key="day.id" 
+        <CalendarDay v-for="day in sharedState.data"
+          :key="day.id"
           :day="day"
           />
       </div>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { store } from "../store.js";
+import { store } from "@/store";
 import CalendarDay from './CalendarDay.vue'
 
 export default {

@@ -2,12 +2,12 @@
   <div id="calendar-entry">
       <!-- Markup for calendar entry -->
       <div class="calendar-entry-note">
-        <input type="text" placeholder="New Event" 
-        v-model="inputEntry" 
+        <input type="text" placeholder="New Event"
+        v-model="inputEntry"
         @keypress.enter="submitEvent(inputEntry)"
         required />
         <p class="calendar-entry-day">
-          Day of event: 
+          Day of event:
           <span class="weekday">
             {{ titleOfActiveDay }}
           </span></p>
@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import { store } from '../store.js';
-import { errorMsg } from '../seed.js';
+import { store } from '@/store';
+import { errorMsg } from '@/seed';
 
 export default {
   name: 'CalendarEntry',
@@ -45,8 +45,10 @@ export default {
     //   }
     // },
     submitEvent(eventDetails) {
-      if (eventDetails === '') return this.error = true;
-
+      if (eventDetails === '') {
+        this.error = true;
+        return this.error;
+      }
       store.submitEvent(eventDetails);
       this.inputEntry = "";
       this.error = false;
