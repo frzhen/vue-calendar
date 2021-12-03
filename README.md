@@ -1,8 +1,7 @@
 # Calendar project in Vue.js
 
 ### Branches Info
-* main: vue3+bulma
-* bootstrap: vue3+bootstrap5
+* main: vue3+bulma+Fontawesome
 
 ### Vue Upgrade
 *`npm install -g @vue/cli@next`
