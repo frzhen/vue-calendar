@@ -10,7 +10,7 @@ export const store = {
   },
   setActiveDay(dayId) {
     this.state.data.map((dayObj) => {
-      dayObj.id === dayId ? dayObj.active = true : dayObj.active = false;
+        dayObj.active = (dayId === dayObj.id);
     });
   },
   submitEvent(eventDetails) {
@@ -28,7 +28,7 @@ export const store = {
     eventObj.edit = false;
   },
   deleteEvent(dayId, eventDetails) {
-    const dayObj = this.state.data.find((day) => day.id === dayId);
+    const dayObj = this.getDayObjById(dayId);
     const eventIndexToRemove = dayObj.events.findIndex(event => event.details === eventDetails);
     dayObj.events.splice(eventIndexToRemove, 1);
   },
@@ -40,7 +40,9 @@ export const store = {
     });
   },
   getEventObj(dayId, eventDetails) {
-    const dayObj = this.state.data.find((day) => day.id === dayId);
-    return dayObj.events.find((event) => event.details === eventDetails);
-  }
+    return this.getDayObjById(dayId).events.find((event) => event.details === eventDetails);
+  },
+  getDayObjById(dayId) {
+      return this.state.data.find((day) => day.id === dayId);
+  },
 };

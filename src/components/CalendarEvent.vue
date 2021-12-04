@@ -3,8 +3,8 @@
     <div v-if="!event.edit">
       <span class="has-text-centered details">{{ event.details }}</span>
       <div class="has-text-centered icons">
-        <strong class="fas fa-edit" @click="editEventCursor(day.id, event.details)"></strong>
-        <strong class="fas fa-trash-alt" @click="deleteEvent(day.id, event.details)"></strong>
+        <em class="fas fa-edit" @click="editEventCursor(day.id, event.details)"></em>
+        <em class="fas fa-trash-alt" @click="deleteEvent(day.id, event.details)"></em>
       </div>
     </div>
     <div v-if="event.edit">
@@ -12,7 +12,7 @@
         v-model="newEventDetails"
         @keypress.enter="updateEvent(day.id, event.details, newEventDetails)" />
       <div class="has-text-centered icons">
-        <strong class="fas fa-check" @click="updateEvent(day.id, event.details, newEventDetails)"></strong>
+        <em class="fas fa-check" @click="updateEvent(day.id, event.details, newEventDetails)"></em>
       </div>
     </div>
 
@@ -56,7 +56,7 @@ export default {
       store.updateEvent(dayId, originalEventDetails, updatedEventDetails);
       this.newEventDetails = '';
     },
-    // the following code has beeen replaced by using vue key modifier
+    // the following code has been replaced by using vue key modifier
     // enterKeyUpdateEvent(dayId, originalEventDetails, updatedEventDetails, e) {
     //   if (e.key === 'Enter') {
     //     this.updateEvent(dayId, originalEventDetails, updatedEventDetails);

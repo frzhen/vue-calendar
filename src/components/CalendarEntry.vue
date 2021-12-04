@@ -38,7 +38,7 @@ export default {
     }
   },
   methods: {
-    // the following code has been replaced by using vue key modifer
+    // the following code has been replaced by using vue key modifier
     // enterKeySubmitEvent(eventDetails, e) {
     //   if (e.key === 'Enter') {
     //     this.submitEvent(eventDetails);
